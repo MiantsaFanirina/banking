@@ -1,7 +1,6 @@
 export const dynamic = 'force-dynamic'
 
 import type { Metadata } from "next";
-import type { Viewport } from "next"
 import { Inter, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
 
@@ -15,12 +14,6 @@ export const metadata: Metadata = {
     icon: "/icons/logo.svg",
   }
 };
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 0.67,
-  maximumScale: 0.67
-}
 
 export default function RootLayout({
   children,
