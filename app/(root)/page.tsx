@@ -21,6 +21,8 @@ const Home = async ({searchParams: {id, page}}: SearchParamProps) => {
   const appwriteItemId = (id as string) || accountsData[0]?.appwriteItemId;
 
   const account = await getAccount({ appwriteItemId })
+  
+  const transactions = account?.transactions
 
   return (
     <section className="home">
@@ -44,7 +46,7 @@ const Home = async ({searchParams: {id, page}}: SearchParamProps) => {
 
         <RecentTranscations
           accounts={accountsData}
-          transactions={account?.transactions}
+          transactions={transactions}
           appwriteItemId={appwriteItemId}
           page={currentPage}
         />
@@ -52,7 +54,7 @@ const Home = async ({searchParams: {id, page}}: SearchParamProps) => {
 
       <RightSidebar
         user={loggedIn}
-        transactions={accounts?.transactions}
+        transactions={transactions}
         banks={accountsData?.slice(0, 2)}
       />
     </section>

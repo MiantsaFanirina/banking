@@ -50,6 +50,7 @@ declare type NewUserParams = {
 };
 
 declare type Account = {
+  sharaebleId: string;
   id: string;
   availableBalance: number;
   currentBalance: number;
@@ -60,7 +61,6 @@ declare type Account = {
   type: string;
   subtype: string;
   appwriteItemId: string;
-  sharableId: string;
 };
 
 declare type Transaction = {
