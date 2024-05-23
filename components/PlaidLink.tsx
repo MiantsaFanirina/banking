@@ -20,12 +20,12 @@ const PlaidLink = ({ user, variant } : PlaidLinkProps) => {
 
     const onSuccess = useCallback<PlaidLinkOnSuccess>(async (public_token : string) => {
         await exchangePublicToken({
-             publicToken: public_token,
-             user
+            publicToken: public_token,
+            user
         })
 
         router.push('/')
-    }, [user, router])
+    }, [user])
 
     const config: PlaidLinkOptions = {
         token,
@@ -38,7 +38,7 @@ const PlaidLink = ({ user, variant } : PlaidLinkProps) => {
         <>
             {variant === "primary" ? (
                 <Button 
-                    onClick={() => open}
+                    onClick={() => open()}
                     disabled={!ready}
                     className='plaidlink-primary'
                 >
