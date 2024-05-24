@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import type { Viewport } from "next";
 import { Inter, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
+import "./OldGlobals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const ibmPlexSerif = IBM_Plex_Serif({ subsets: ["latin"], weight:[ "400", "700"] ,variable: '--font-ibm-plex-serif' });
@@ -19,8 +20,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 0.75,
-  userScalable: true
+  maximumScale: 1,
+  userScalable: false,
 }
 
 export default function RootLayout({
@@ -29,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="cupcake">
       <body className={`${inter.variable} ${ibmPlexSerif.variable}`}>{children}</body>
     </html>
   );

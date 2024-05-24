@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 
+import { ReactNode } from "react";
+
 declare type SearchParamProps = {
   params: { [key: string]: string };
   searchParams: { [key: string]: string | string[] | undefined };
@@ -222,6 +224,7 @@ declare interface RightSidebarProps {
 
 declare interface SiderbarProps {
   user: User;
+  children: ReactNode;
 }
 
 declare interface RecentTransactionsProps {
