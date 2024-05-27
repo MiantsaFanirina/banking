@@ -25,7 +25,7 @@ const NavLink = () => {
                         `}
                     >
                         {/* <Image src={item.imgURL} alt={item.label} fill className={cn({'brightness-[3] inver-0': isActive})}/> */}
-                        <Image src={item.imgURL} alt={item.label} width={20} height={20}/>
+                        <Image src={item.imgURL} alt={item.label} width={20} height={20} className={isActive ? "opacity-100" : "opacity-60"}/>
                         <span className={`text-lg overflow-hidden transition-all ${expanded ? "w-52 ml-3" : "w-0"}`}>{item.label}</span>
                     </Link>
                 )

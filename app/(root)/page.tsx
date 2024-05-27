@@ -7,6 +7,7 @@ import RightSidebar from '@/components/RightSidebar'
 import { getLoggedInUser } from '@/lib/actions/user.actions'
 import { getAccount, getAccounts } from '@/lib/actions/bank.actions'
 import RecentTranscations from '@/components/RecentTranscations'
+import { SearchParamProps } from '@/types'
 
 const Home = async ({searchParams: {id, page}}: SearchParamProps) => {
   const currentPage = Number(page as string) || 1
@@ -40,16 +41,18 @@ const Home = async ({searchParams: {id, page}}: SearchParamProps) => {
             accounts={accountsData}
             totalBanks={accounts?.totalBanks}
             totalCurrentBalance={accounts?.totalCurrentBalance}
+            transactions={transactions}
+            appwriteItemId={appwriteItemId}
           />
 
         </header>
 
-        <RecentTranscations
+        {/* <RecentTranscations
           accounts={accountsData}
           transactions={transactions}
           appwriteItemId={appwriteItemId}
           page={currentPage}
-        />
+        /> */}
       </div>
 
       <RightSidebar

@@ -61,7 +61,7 @@
   }
 
   .header-2 {
-    @apply text-18 font-semibold text-gray-900;
+    @apply text-xl font-semibold text-white;
   }
 
   .text-10 {
@@ -106,7 +106,7 @@
 
   /* Home */
   .home {
-    @apply no-scrollbar flex w-full flex-row max-xl:max-h-screen max-xl:overflow-y-scroll;
+    @apply no-scrollbar flex w-full h-full flex-row overflow-y-scroll;
   }
 
   .home-content {
@@ -118,7 +118,7 @@
   }
 
   .total-balance {
-    @apply flex w-full items-center gap-4 rounded-xl border border-gray-200 p-4 shadow-chart sm:gap-6 sm:p-6;
+    @apply flex w-full h-fit items-center flex-wrap justify-between gap-4 rounded-xl md:p-12 p-4 shadow-chart sm:gap-6 sm:p-6 bg-base-100;
   }
 
   .total-balance-chart {
@@ -126,11 +126,11 @@
   }
 
   .total-balance-label {
-    @apply text-14 font-medium text-gray-600;
+    @apply text-xl font-medium text-gray-300;
   }
 
   .total-balance-amount {
-    @apply text-24 lg:text-30 flex-1 font-semibold text-gray-900;
+    @apply text-4xl flex-1 font-semibold ;
   }
 
   .recent-transactions {
@@ -138,7 +138,7 @@
   }
 
   .view-all-btn {
-    @apply text-14 rounded-lg border border-gray-300 px-4 py-2.5 font-semibold text-gray-700;
+    @apply btn btn-primary text-white text-lg font-semibold;
   }
 
   .recent-transactions {
@@ -146,7 +146,7 @@
   }
 
   .recent-transactions-label {
-    @apply text-20 md:text-24 font-semibold text-gray-900;
+    @apply text-20 md:text-24 font-semibold;
   }
 
   .recent-transactions-tablist {
@@ -213,11 +213,11 @@
   }
 
   .header-box-title {
-    @apply text-24 lg:text-30 font-semibold text-gray-900;
+    @apply text-3xl font-semibold text-gray-200;
   }
 
   .header-box-subtext {
-    @apply text-14 lg:text-16 font-normal text-gray-600;
+    @apply text-xl  font-normal text-gray-400;
   }
 
   /* Bank Card */

@@ -209,6 +209,8 @@ declare interface TotlaBalanceBoxProps {
   accounts: Account[];
   totalBanks: number;
   totalCurrentBalance: number;
+  transactions: Transaction[];
+  appwriteItemId: string;
 }
 
 declare interface FooterProps {
@@ -232,6 +234,12 @@ declare interface RecentTransactionsProps {
   transactions: Transaction[];
   appwriteItemId: string;
   page: number;
+}
+
+declare interface LastTransactionCardProps {
+  accounts: Account[];
+  transactions: Transaction[];
+  appwriteItemId: string;
 }
 
 declare interface TransactionHistoryTableProps {
